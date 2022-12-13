@@ -1,3 +1,25 @@
+/* Font Styles */
+@font-face {
+  font-family: "Ena01";
+  src: local("Ena01"), url("./assets/fonts/Eina01-Bold.ttf") format("ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Eina01";
+  src: local("Eina01"), url("./assets/fonts/Eina01-SemiBold.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Golden Hills DEMO";
+  src: local("Golden Hills DEMO"), url("./assets/fonts/GoldenHillsDEMO.ttf") format("ttf");
+  font-weight: normal;
+}
+
+
+/* Layout Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,38 +27,49 @@
   }
   html {
     font-size: 16px;
-    font-family: "Montserrat";
+    /* font-family: "Montserrat"; */
+    font-family: 'Eina01', sans-serif;
   }
   body {
     background-color: #F6F7F2;
     width: 100%;
+    font-family: 'Eina01', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   nav{
-    padding: 20px 50px;
+    /* padding: 20px 50px; */
+    padding: 1rem 0;
+    width: min(90%, 1600px);
   }
   section {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 5fr 1fr;
     overflow: hidden;
-    padding: 0 50px;
+    /* padding: 0 50px; */
+    margin-top: 1rem;
+    width: min(90%, 1600px);
   }
   .container {
-    width: 100%;
-    max-width: 1170px;
+    /* width: 100%;
+    max-width: 1170px; */
     position: relative;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
   }
   .container .interiorimg {
-    width: 60vw;
-    height: auto;
-    padding-top: 30px;
+    width: 95%;
+    height: 90%;
+    object-fit: cover;
+    /* padding-top: 30px; */
     border-radius: 40px 240px 40px 40px;
   }
   .side{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: center;
   }
   .side ul{
@@ -147,13 +180,16 @@
     padding: 20px;
   }
   .tooltip-1 .tooltip-content .content h1 {
+    font-family: 'Eina01',sans-serif;
+    font-weight: 600;
     font-size: 24px;
   }
   .tooltip-1 .tooltip-content .content p {
+    font-family: 'Eina01', sans-serif;
     font-size: 14px;
   }
   .tooltip-1 .tooltip-content .content button {
-    font-family: "Montserrat";
+    /* font-family: "Montserrat"; */
     font-size: 18px;
     font-weight: 400;
     border: none;
@@ -249,6 +285,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
+
   
   a {
     padding: 0;
