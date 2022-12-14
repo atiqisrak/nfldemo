@@ -60,7 +60,7 @@ body {
 nav {
   /* padding: 20px 50px; */
   padding: 1rem 0;
-  width: min(90%, 1600px);
+  width: min(90%, 1400px);
 }
 section {
   display: grid;
@@ -68,7 +68,7 @@ section {
   overflow: hidden;
   /* padding: 0 50px; */
   margin-top: 1rem;
-  width: min(90%, 1600px);
+  width: min(90%, 1400px);
 }
 .container {
   /* width: 100%;
