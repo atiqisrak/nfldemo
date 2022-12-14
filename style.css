@@ -26,7 +26,7 @@
     box-sizing: border-box;
   }
   html {
-    font-size: 16px;
+    /* font-size: 16px; */
     /* font-family: "Montserrat"; */
     font-family: 'Eina01', sans-serif;
   }
@@ -71,6 +71,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    z-index: 2;
   }
   .side ul{
     list-style: none;
@@ -79,7 +80,7 @@
     padding-bottom: 20px;
     transition: all ease-in-out 0.12s;
     text-align: end;
-    font-size: clamp(1em, 80%, 1.4em);
+    font-size: clamp(1rem, 1.8vw, 1.6rem);
     font-weight: 400;
     color: #8B8C8C;
   }
@@ -126,7 +127,7 @@
     position: absolute;
     content: "";
     top: 50%;
-    left: 80%;
+    left: 90%;
     height: 25px;
     width: 25px;
     background-color: rgb(255, 255, 255);
