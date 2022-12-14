@@ -16,7 +16,7 @@
 
   <body>
     <nav>
-      <a class="nfllogo" href="/index.html">
+      <a class="nfllogo">
         <img src="./assets/nfllogo.jpg" alt="Navana Furniture Limited Official Logo">
       </a>
     </nav>
@@ -31,28 +31,40 @@
             </div>
             <div class="tooltip-content">
               <div class="arrow"></div>
-              <div class="img">
-                <img src="./assets/highneckchair.png" alt="">
-              </div>
-              <div class="tooltip-content">
-                <div class="arrow"></div>
+              <div class="hulululu">
                 <div class="img">
-                  <img src="./assets/highneckchair.png" alt="">
+                  <img data-image="yellow" src="/assets/chair1.png" alt="">
+                  <img class="active" data-image="red" src="/assets/chair2.png" alt="">
+                  <img data-image="green" src="/assets/chair3.png" alt="">
                 </div>
                 <div class="content">
-                  <h1>Hi-Neck Swivel Chair</h1>
-                  <div class="reviews">
-                    <p>&#9733; 5.0 <span>(37 reviews)</span></p>
-                    <div class="colors">
-                      <button class="color1"></button>
-                      <button class="color2"></button>
-                      <button class="color3"></button>
-                      <button class="color4"></button>
+                  <div>
+                    <h1>Hi-Neck Swivel Chair</h1>
+                    <div class="reviews">
+                      <div class="ratings">
+                        <h3>&#9733; 5.0</h3>
+                        <p>(37 reviews)</p>
+                      </div>
+                      <div class="color-choose">
+                        <div>
+                          <input type="radio" data-image="yellow" id="yellow" name="color" value="yellow">
+                          <label for="yellow"><span></span></label>
+                        </div>
+                        <div>
+                          <input type="radio" data-image="red" id="red" name="color" value="red" checked>
+                          <label for="red"><span></span></label>
+                        </div>
+                        <div>
+                          <input type="radio" data-image="green" id="green" name="color" value="green">
+                          <label for="green"><span></span></label>
+                        </div>
+                      </div>
                     </div>
+                    <button>Buy Now $199</button>
                   </div>
-                  <button><a href="/chair.html">Buy Now</a></button>
                 </div>
               </div>
+
             </div>
           </div>
           <!-- <div class="tooltip tooltip-2">

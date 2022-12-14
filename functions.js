@@ -76,3 +76,18 @@ close.addEventListener("click", () => {
 });
 
 youtubeLink.setAttribute("href", "https://youtu.be/e_jEquJo7y8");
+
+document.addEventListener('DOMContentLoaded', function(){
+
+  const colorsInput = document.querySelectorAll('.color-choose input');
+  colorsInput.forEach(function(item){
+    item.addEventListener('click', function(el){
+      let color = this.dataset.image;
+      let activeElem = document.querySelector('.active');
+      activeElem.classList.remove('active');
+      document.querySelector('.hulululu .img img[data-image= ' + color + ']').classList.add('active');
+      this.classList.add('active');
+    })
+  });
+
+});
