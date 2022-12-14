@@ -26,7 +26,7 @@
     box-sizing: border-box;
   }
   html {
-    /* font-size: 16px; */
+    font-size: 16px;
     /* font-family: "Montserrat"; */
     font-family: 'Eina01', sans-serif;
   }
@@ -69,9 +69,8 @@
   .side{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    z-index: 2;
   }
   .side ul{
     list-style: none;
@@ -80,8 +79,8 @@
     padding-bottom: 20px;
     transition: all ease-in-out 0.12s;
     text-align: end;
-    font-size: clamp(1rem, 1.8vw, 1.6rem);
-    font-weight: 400;
+    font-size: 1.6rem;
+    font-weight: 500;
     color: #8B8C8C;
   }
   .side li:hover{
@@ -113,6 +112,10 @@
     /* left: -50%; */
     z-index: 2;
   }
+  .hulululu{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
   .tooltip-content .arrow {
     position: absolute;
     width: 10px;
@@ -127,7 +130,7 @@
     position: absolute;
     content: "";
     top: 50%;
-    left: 90%;
+    left: 80%;
     height: 25px;
     width: 25px;
     background-color: rgb(255, 255, 255);
@@ -154,44 +157,83 @@
   /* Custom Style for tooltip-1 */
   
   .tooltip-1 .pin {
-    top: 32%;
-    left: 30vw;
+    top: 30%;
+    left: 43%;
     height: 15px;
     width: 15px;
     background-color: rgb(255, 255, 255);
   }
   .tooltip-1 .tooltip-content {
-    /* display: flex; */
-    max-width: 600px;
-    height: 300px;
-    /* align-items: stretch; */
-    /* justify-content: center; */
+    display: flex;
+    max-width: 620px;
+    height: 320px;
+    align-items: stretch;
+    justify-content: center;
     padding: 0;
     background-color: #F6F7F2;
-
-    display: grid;
-    grid-template-columns: 1fr 2fr;
   }
   .tooltip-1.active .tooltip-content {
     display: flex;
   }
-  .tooltip-1 .tooltip-content img {
-    width: 90%;
-    object-fit: fill;
+  .hulululu{
+    padding: 30px 30px 30px 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-content: center;
   }
+  /* .tooltip-1 .tooltip-content img {
+    width: 100%;
+    object-fit: fill;
+    opacity: 0;
+  } */
+  
+  .hulululu .img img {
+    width: 40%;
+    position: absolute;
+    object-fit: fill;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
   .tooltip-1 .tooltip-content .content {
-    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
   }
+  
   .tooltip-1 .tooltip-content .content h1 {
     font-family: 'Eina01',sans-serif;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.9em;
+    padding-bottom: 20px;
   }
-  .tooltip-1 .tooltip-content .content p {
+  .tooltip-1 .tooltip-content .content .reviews{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .tooltip-1 .tooltip-content .content .ratings{
+    display: flex;
+    align-items: center;
+  }
+  .tooltip-1 .tooltip-content .content h3 {
     font-family: 'Eina01', sans-serif;
-    font-size: 14px;
+    font-size: 1.9em;
+    font-weight: 600;
+    color: #FAA71E;
+    padding-right: 10px;
+    line-height: 1em;
   }
+  .tooltip-1 .tooltip-content .content p{
+    font-family: 'Eina01', sans-serif;
+    color: #8B8C8C;
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1em;
+  }
+  
   .tooltip-1 .tooltip-content .content button {
     /* font-family: "Montserrat"; */
     font-size: 18px;
@@ -206,10 +248,54 @@
     border-radius: 4px;
     box-shadow: 0px 0px 20px #00000020;
   }
-  .reviews{
 
+  
+  .hulululu .img img.active {
+    opacity: 1;
+  }
+
+  /* Color switch buttons */
+  .color-choose div {
+    display: inline-block;
+  }
+  .color-choose input[type="radio"] {
+    display: none;
+  }
+  .color-choose input[type="radio"] + label span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: -1px 10px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+  }
+  .color-choose input[type="radio"]:hover + label span {
+    scale: 1.5;
+  }
+  .color-choose input[type="radio"]#red + label span {
+    background-color: #A11211;
+  }
+  .color-choose input[type="radio"]#yellow + label span {
+    background-color: #E8CF3B;
+  }
+  .color-choose input[type="radio"]#green + label span {
+    background-color: #49FF86;
+  }
+  .color-choose input[type="radio"]:checked + label span {
+    /* background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxM3B4IiB2aWV3Qm94PSIwIDAgMTggMTMiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQxLjIgKDM1Mzk3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5JY29uPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkVjb21tZXJjZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTg0NC4wMDAwMDAsIC0zMzg5LjAwMDAwMCkiIGZpbGw9IiNGRkZGRkYiPgogICAgICAgICAgICA8ZyBpZD0iUHJvZHVjdC1DYXJkLSMxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNTAuMDAwMDAwLCAyOTQyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9IkNvbG9yIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2ODMuMDAwMDAwLCAzOTkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTI4Ljg0NDM2ODgsNDguOTIyNDk4NyBMMjguMDk1MjY5LDQ4LjE1ODU0ODEgQzI3Ljg4Nzk4MDksNDcuOTQ3MTUwNiAyNy41NTIzOTY5LDQ3Ljk0NzE1MDYgMjcuMzQ1MTA4OCw0OC4xNTg1NDgxIEwxNy42NzUyLDU4LjAyMDcwMDkgQzE3LjQ2NzM4MTgsNTguMjMyMDk4NCAxNy4xMzE3OTc4LDU4LjIzMjA5ODQgMTYuOTI1NTcwMSw1OC4wMjA3MDA5IEwxMi42NTQ2OTM3LDUzLjY2NTY5NjIgQzEyLjQ0NzQwNTYsNTMuNDU0Mjk4NyAxMi4xMTE4MjE2LDUzLjQ1NDI5ODcgMTEuOTA1NTkzOCw1My42NjU2OTYyIEwxMS4xNTU0MzM3LDU0LjQzMDE4NzQgQzEwLjk0ODE0NTYsNTQuNjQxNTg0OSAxMC45NDgxNDU2LDU0Ljk4MzgyMTggMTEuMTU1NDMzNyw1NS4xOTQ2Nzg2IEwxNi41MzY5NzEyLDYwLjY4MzQ0NDMgQzE2Ljk1MDQ4Nyw2MS4xMDUxNTggMTcuNjIxMTI0OSw2MS4xMDU2OTg2IDE4LjAzNTE3MDksNjAuNjgzOTg0OSBMMjguODQzODM4Nyw0OS42ODc1MzA1IEMyOS4wNTE2NTY5LDQ5LjQ3NjY3MzcgMjkuMDUyMTg3LDQ5LjEzMzg5NjIgMjguODQ0MzY4OCw0OC45MjI0OTg3IiBpZD0iSWNvbiI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4='); */
+    /* background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='11.5' stroke='%237E6F67'/%3E%3C/svg%3E%0A"); */
+    border: 2px solid #424242;
+    scale: 1.5;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
+  /* Color choose button */
+
+
   /* custom style for tooltip-2 */
   /*
   .tooltip-2 .pin {
