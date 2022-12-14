@@ -17,7 +17,7 @@ function contentPosition() {
       // console.log('right-conflict', tooltip)
       content.style.left =
         pinLeft - content.offsetWidth / 2 + extraLeft - 30 + "px";
-      content.style.top = pin.offsetTop + 30 + "px";
+      content.style.top = pin.offsetTop + 50 + "px";
     } else if (
       pin.offsetLeft + container.offsetLeft <
       content.offsetWidth / 2
@@ -27,7 +27,7 @@ function contentPosition() {
       content.style.top = pin.offsetTop + 30 + "px";
     } else {
       content.style.left = pinLeft - content.offsetWidth / 2 + "px";
-      content.style.top = pin.offsetTop + 30 + "px";
+      content.style.top = pin.offsetTop + 25 + "px";
     }
     arrow.style.left =
       pinLeft - content.offsetLeft + pin.offsetWidth / 2 + "px";
