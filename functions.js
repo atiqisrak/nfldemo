@@ -33,61 +33,47 @@ function contentPosition() {
       pinLeft - content.offsetLeft + pin.offsetWidth / 2 + "px";
   });
 }
-tooltips.forEach((tooltip) => {
-  const pin = tooltip.querySelector(".pin");
-  const content = tooltip.querySelector(".tooltip-content");
-  pin.addEventListener("mouseover", () => {
-    tooltip.classList.add("active");
-  });
-  pin.addEventListener("mouseleave", () => {
-    timeoutId = setTimeout(() => {
-      if (!tooltip.classList.contains("content-hover")) {
-        tooltip.classList.remove("active");
-      }
-    }, 2000);
-  });
-  content.addEventListener("mouseover", () => {
-    clearTimeout(timeoutId);
-    tooltip.classList.add("active");
-    tooltip.classList.add("content-hover");
-  });
-  content.addEventListener("mouseleave", () => {
-    timeoutId = setTimeout(() => {
-      tooltip.classList.remove("active");
-      tooltip.classList.remove("content-hover");
-    }, 2000);
-  });
-});
 
-// *********************
-// This Code is for only the floating card in right bottom corner
-// **********************
-
-const WebCifarIcon = document.querySelector("#webCifar-icon");
-const WebCifarEl = document.querySelector("#webCifar");
-const close = WebCifarEl.querySelector(".close");
-const youtubeLink = document.querySelector(".youtubeLink");
-
-WebCifarIcon.addEventListener("click", () => {
-  WebCifarEl.classList.add("active");
-});
-close.addEventListener("click", () => {
-  WebCifarEl.classList.remove("active");
-});
-
-youtubeLink.setAttribute("href", "https://youtu.be/e_jEquJo7y8");
 
 document.addEventListener('DOMContentLoaded', function(){
 
   const colorsInput = document.querySelectorAll('.color-choose input');
-  colorsInput.forEach(function(item){
-    item.addEventListener('click', function(el){
-      let color = this.dataset.image;
-      let activeElem = document.querySelector('.active');
-      activeElem.classList.remove('active');
-      document.querySelector('.hulululu .img img[data-image= ' + color + ']').classList.add('active');
-      this.classList.add('active');
-    })
-  });
 
+
+
+  tooltips.forEach((tooltip) => {
+    const pin = tooltip.querySelector(".pin");
+    const content = tooltip.querySelector(".tooltip-content");
+    pin.addEventListener("mouseover", () => {
+      tooltip.classList.add("active");
+    });
+    pin.addEventListener("mouseleave", () => {
+      timeoutId = setTimeout(() => {
+        if (!tooltip.classList.contains("content-hover")) {
+          tooltip.classList.remove("active");
+        }
+      }, 1000);
+    });
+    content.addEventListener("mouseover", () => {
+      clearTimeout(timeoutId);
+      tooltip.classList.add("active");
+      tooltip.classList.add("content-hover");
+    });
+    colorsInput.forEach(function(item){
+      item.addEventListener('click', function(el){
+        let color = this.dataset.image;
+        let activeElem = document.querySelector('.active');
+        activeElem.classList.remove('active');
+        document.querySelector('.hulululu img[data-image= ' + 
+        color + ']').classList.add('active');
+        this.classList.add('active');
+      })
+    });
+    content.addEventListener("mouseleave", () => {
+      timeoutId = setTimeout(() => {
+        tooltip.classList.remove("active");
+        tooltip.classList.remove("content-hover");
+      }, 10000);
+    });
+  });
 });
