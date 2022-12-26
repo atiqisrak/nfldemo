@@ -1,73 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFL v2</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/favicon/site.webmanifest">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFL v2</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+</head>
 
-  <body>
-    <nav>
-      <a class="nfllogo" href="./index.html">
-        <img src="./assets/nfllogo.jpg" alt="Navana Furniture Limited Official Logo">
-      </a>
-    </nav>
-    <!-- Custom Code -->
-    <section>
-      <div class="container">
-        <img class="interiorimg" src="./assets/room-interior.jpg" alt="Room Interior">
-        <div class="all-tooltip">
-          <div class=" tooltip tooltip-1">
-            <div class="pin">
-              <ion-icon name="add-circle"></ion-icon>
-            </div>
-            <div class="tooltip-content">
-              <div class="arrow"></div>
-              <div class="hulululu">
-                <div class="img">
-                  <img data-image="yellow" src="/assets/chair1.png" alt="">
-                  <img class="active" data-image="red" src="/assets/chair2.png" alt="">
-                  <img data-image="green" src="/assets/chair3.png" alt="">
-                </div>
-                <div class="content">
-                  <div>
-                    <h1>Hi-Neck Swivel Chair</h1>
-                    <div class="reviews">
-                      <div class="ratings">
-                        <h3>&#9733; 5.0</h3>
-                        <p>(37 reviews)</p>
+<body>
+  <nav>
+    <a class="nfllogo" href="./index.html">
+      <img src="./assets/nfllogo.jpg" alt="Navana Furniture Limited Official Logo">
+    </a>
+  </nav>
+  <!-- Custom Code -->
+  <section>
+    <div class="container">
+      <img class="interiorimg" src="./assets/room-interior.jpg" alt="Room Interior">
+      <div class="all-tooltip">
+        <div class=" tooltip tooltip-1">
+          <div class="pin">
+            <ion-icon name="add-circle"></ion-icon>
+          </div>
+          <div class="tooltip-content">
+            <div class="arrow"></div>
+            <div class="hulululu">
+              <div class="img">
+                <!-- <img data-image="yellow" src="/assets/chair1.png" alt="">
+                <img class="active" data-image="red" src="/assets/chair2.png" alt="">
+                <img data-image="green" src="/assets/chair3.png" alt=""> -->
+
+                <img class="" data-image="black" src="/assets/black.png" alt="">
+                <img class="active" data-image="blue" src="/assets/blue.png" alt="">
+                <img class="" data-image="brown" src="/assets/brown.png" alt="">
+                <img class="" data-image="white" src="/assets/white.png" alt="">
+
+              </div>
+              <div class="content">
+                <div>
+                  <h1>Hi-Neck Swivel Chair</h1>
+                  <div class="reviews">
+                    <div class="ratings">
+                      <h3>&#9733; 5.0</h3>
+                      <p>(37 reviews)</p>
+                    </div>
+                    <div class="color-choose">
+                      <div>
+                        <input type="radio" data-image="black" id="black" name="color" value="black">
+                        <label for="black"><span></span></label>
                       </div>
-                      <div class="color-choose">
-                        <div>
-                          <input type="radio" data-image="yellow" id="yellow" name="color" value="yellow">
-                          <label for="yellow"><span></span></label>
-                        </div>
-                        <div>
-                          <input type="radio" data-image="red" id="red" name="color" value="red" checked>
-                          <label for="red"><span></span></label>
-                        </div>
-                        <div>
-                          <input type="radio" data-image="green" id="green" name="color" value="green">
-                          <label for="green"><span></span></label>
-                        </div>
+                      <div>
+                        <input type="radio" data-image="blue" id="blue" name="color" value="blue" checked>
+                        <label for="blue"><span></span></label>
+                      </div>
+                      <div>
+                        <input type="radio" data-image="brown" id="brown" name="color" value="brown">
+                        <label for="brown"><span></span></label>
+                      </div>
+                      <div>
+                        <input type="radio" data-image="white" id="white" name="color" value="white">
+                        <label for="white"><span></span></label>
                       </div>
                     </div>
-                    <button><a href="./chair.html">Buy Now</a></button>
                   </div>
+                  <button><a href="./chair.html">Buy Now</a></button>
                 </div>
               </div>
-
             </div>
+
           </div>
-          <!-- <div class="tooltip tooltip-2">
+        </div>
+        <!-- <div class="tooltip tooltip-2">
               <div class="pin"></div>
               <div class="tooltip-content">
                 <div class="arrow"></div>
@@ -104,24 +114,24 @@
                 </div>
               </div>
             </div> -->
-        </div>
       </div>
-      <div class="side">
-        <ul>
-          <li><a href="#">Bed Room</a></li>
-          <li><a href="#">Living Room</a></li>
-          <li><a href="#">Dinning Room</a></li>
-          <li><a href="#">Work Space</a></li>
-          <li class="active"><a href="#">Meeting Room</a></li>
-          <li><a href="#">Medical Ward</a></li>
-        </ul>
-      </div>
+    </div>
+    <div class="side">
+      <ul>
+        <li><a href="#">Bed Room</a></li>
+        <li><a href="#">Living Room</a></li>
+        <li><a href="#">Dinning Room</a></li>
+        <li><a href="#">Work Space</a></li>
+        <li class="active"><a href="#">Meeting Room</a></li>
+        <li><a href="#">Medical Ward</a></li>
+      </ul>
+    </div>
 
 
-    </section>
+  </section>
 
-    <!-- Custom Code -->
-  </body>
-  <script src="./functions.js"></script>
+  <!-- Custom Code -->
+</body>
+<script src="./functions.js"></script>
 
 </html>
