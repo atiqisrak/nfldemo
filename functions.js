@@ -19,6 +19,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const colorsInput = document.querySelectorAll(".color-choose2 input");
+  colorsInput.forEach(function (item) {
+    item.addEventListener("click", function (contentPosition) {
+      let color = this.dataset.image;
+      let activeElem = document.querySelector(".hulululu2 .active");
+      activeElem.classList.remove("active");
+      document
+        .querySelector(".hulululu2 img[data-image= " + color + "]")
+        .classList.add("active");
+      this.classList.add("active");
+    });
+  });
+});
 
 function contentPosition() {
   tooltips.forEach((tooltip) => {
@@ -66,10 +80,12 @@ tooltips.forEach((tooltip) => {
     tooltip.classList.add("active");
     tooltip.classList.add("content-hover");
   });
-  // content.addEventListener("mouseleave", () => {
-  //   timeoutId = setTimeout(() => {
-  //     tooltip.classList.remove("active");
-  //     tooltip.classList.remove("content-hover");
-  //   }, 5000);
-  // });
+  content.addEventListener("mouseleave", () => {
+    timeoutId = setTimeout(() => {
+      tooltip.classList.remove("active");
+    //   tooltip.classList.remove("content-hover");
+    // }, 5000);      
+    tooltip.classList.remove("content-hover");
+    });
+  });
 });
